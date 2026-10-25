@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEasy | Admin Products</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="/index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span>ShopEasy</a>
+        <div class="nav-actions">
+          <button id="logout-button" class="ghost-btn" type="button">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="container">
+        <div class="admin-layout">
+          <aside class="sidebar">
+            <a href="/admin/dashboard.html">Overview</a>
+            <a class="active" href="/admin/products.html">Products</a>
+            <a href="/admin/categories.html">Categories</a>
+            <a href="/admin/orders.html">Orders</a>
+          </aside>
+          <div>
+            <section class="panel">
+              <h2 id="product-form-title">Add product</h2>
+              <div id="form-alert" class="alert" role="alert"></div>
+              <form id="product-form" class="form-grid">
+                <input id="product-id" type="hidden" />
+                <div class="field">
+                  <label for="product-category">Category</label>
+                  <select id="product-category" required></select>
+                </div>
+                <div class="field">
+                  <label for="product-name">Product name</label>
+                  <input id="product-name" type="text" maxlength="120" required />
+                </div>
+                <div class="field full">
+                  <label for="product-description">Description</label>
+                  <textarea id="product-description" maxlength="2000"></textarea>
+                </div>
+                <div class="field">
+                  <label for="product-price">Price (₹)</label>
+                  <input id="product-price" type="number" min="0" step="1" required />
+                </div>
+                <div class="field">
+                  <label for="product-stock">Stock</label>
+                  <input id="product-stock" type="number" min="0" step="1" required />
+                </div>
+                <div class="field full">
+                  <label for="product-image-url">Image URL or local asset path (optional)</label>
+                  <input id="product-image-url" type="text" maxlength="500" placeholder="/images/products/your-product.svg or https://…" />
+                </div>
+                <div class="field full">
+                  <label><input id="product-active" type="checkbox" checked /> Active in catalogue</label>
+                </div>
+                <div class="field full inline-actions">
+                  <button id="product-submit" class="primary-btn" type="submit">Create product</button>
+                  <button id="product-cancel" class="secondary-btn hidden" type="button">Cancel edit</button>
+                </div>
+              </form>
+            </section>
+            <section class="panel">
+              <h2>All products</h2>
+              <div id="admin-products-table" class="table-wrap" aria-live="polite"></div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="/js/admin.js"></script>
+  </body>
+</html>

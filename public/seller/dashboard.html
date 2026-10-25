@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEasy | Seller Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="/index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span>ShopEasy</a>
+        <div class="nav-actions">
+          <a href="/seller/products.html" class="nav-pill">Manage products</a>
+          <a href="/seller/orders.html" class="nav-pill">Orders</a>
+          <button id="logout-button" class="ghost-btn" type="button">Logout</button>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <div class="container">
+        <div class="page-header">
+          <h1>Seller dashboard</h1>
+          <p>Manage your catalogue and see orders containing your products.</p>
+        </div>
+        <div id="form-alert" class="alert" role="alert"></div>
+        <div id="seller-stats" class="dash-grid" aria-live="polite"></div>
+        <section class="panel">
+          <div class="section-head">
+            <h2>Your products</h2>
+            <a class="primary-btn" href="/seller/products.html">Manage products</a>
+          </div>
+          <div id="seller-product-summary" class="table-wrap" aria-live="polite"></div>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="/js/seller.js"></script>
+  </body>
+</html>

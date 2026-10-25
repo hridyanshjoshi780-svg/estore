@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEasy | Admin Categories</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="/index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span>ShopEasy</a>
+        <div class="nav-actions">
+          <button id="logout-button" class="ghost-btn" type="button">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="container">
+        <div class="admin-layout">
+          <aside class="sidebar">
+            <a href="/admin/dashboard.html">Overview</a>
+            <a href="/admin/products.html">Products</a>
+            <a class="active" href="/admin/categories.html">Categories</a>
+            <a href="/admin/orders.html">Orders</a>
+          </aside>
+          <div class="panel">
+            <h2>Category management</h2>
+            <div id="form-alert" class="alert" role="alert"></div>
+            <form id="category-form" class="inline-form">
+              <input id="category-name" type="text" maxlength="80" placeholder="Category name" required />
+              <button class="primary-btn" type="submit">Add category</button>
+            </form>
+            <div id="admin-categories-table" class="table-wrap" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="/js/admin.js"></script>
+  </body>
+</html>

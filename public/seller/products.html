@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEasy | Seller Products</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="/index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span>ShopEasy</a>
+        <div class="nav-actions">
+          <a href="/seller/dashboard.html" class="nav-pill">Dashboard</a>
+          <a href="/seller/orders.html" class="nav-pill">Orders</a>
+          <button id="logout-button" class="ghost-btn" type="button">Logout</button>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <div class="container">
+        <div class="page-header">
+          <h1>Manage products</h1>
+          <p>Product changes are saved to the catalogue and used for future orders.</p>
+        </div>
+        <div id="form-alert" class="alert" role="alert"></div>
+        <section class="panel">
+          <h2 id="seller-product-form-title">Add a product</h2>
+          <form id="seller-product-form" class="form-grid">
+            <input id="seller-product-id" type="hidden" />
+            <div class="field">
+              <label for="seller-product-name">Product name</label>
+              <input id="seller-product-name" name="name" maxlength="120" required />
+            </div>
+            <div class="field">
+              <label for="seller-product-category">Category</label>
+              <select id="seller-product-category" name="categoryId" required></select>
+            </div>
+            <div class="field">
+              <label for="seller-product-price">Price (₹)</label>
+              <input id="seller-product-price" name="price" type="number" min="0" step="1" required />
+            </div>
+            <div class="field">
+              <label for="seller-product-stock">Stock</label>
+              <input id="seller-product-stock" name="stock" type="number" min="0" step="1" required />
+            </div>
+            <div class="field full">
+              <label for="seller-product-image">Image URL or local asset path (optional)</label>
+              <input id="seller-product-image" name="imageUrl" type="text" maxlength="500" placeholder="/images/products/your-product.svg or https://…" />
+            </div>
+            <div class="field full">
+              <label for="seller-product-description">Description</label>
+              <textarea id="seller-product-description" name="description" maxlength="2000" rows="4"></textarea>
+            </div>
+            <div class="field full">
+              <label><input id="seller-product-active" type="checkbox" checked /> Active in catalogue</label>
+            </div>
+            <div class="field full inline-actions">
+              <button id="seller-product-submit" class="primary-btn" type="submit">Add product</button>
+              <button id="seller-product-cancel" class="secondary-btn hidden" type="button">Cancel edit</button>
+            </div>
+          </form>
+        </section>
+        <section class="panel">
+          <h2>Your catalogue</h2>
+          <div id="seller-products-table" class="table-wrap" aria-live="polite"></div>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="/js/seller.js"></script>
+  </body>
+</html>

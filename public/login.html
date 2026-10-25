@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEasy | Login</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="/index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span>ShopEasy</a>
+        <div class="nav-actions">
+          <a href="/orders.html" class="nav-pill"><strong>Returns</strong><span>& Orders</span></a>
+          <a href="/cart.html" class="nav-pill cart-pill"><strong>Cart</strong><span class="cart-count" id="cart-count">0</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main class="center-wrap">
+      <div class="auth-card">
+        <h1>Welcome back</h1>
+        <div id="form-alert" class="alert" role="alert"></div>
+        <form id="auth-form" data-mode="login">
+          <div class="field">
+            <label for="login-email">Email</label>
+            <input id="login-email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div class="field">
+            <label for="login-password">Password</label>
+            <input id="login-password" name="password" type="password" placeholder="Your password" required />
+          </div>
+          <button class="primary-btn wide-button" type="submit">Login</button>
+        </form>
+        <div class="auth-links">
+          <span>New to ShopEasy?</span>
+          <a href="/register.html">Create account</a>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="/js/auth.js"></script>
+  </body>
+</html>

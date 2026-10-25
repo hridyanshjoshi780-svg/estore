@@ -1,0 +1,37 @@
+{
+  "name": "shopeasy-server",
+  "version": "1.0.0",
+  "description": "ShopEasy backend and app server",
+  "main": "server/src/server.js",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server/src/server.js",
+    "start": "node server/src/server.js",
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hridyanshjoshi780-svg/estore.git"
+  },
+  "keywords": [
+    "shopeasy",
+    "ecommerce",
+    "express",
+    "sqlite"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hridyanshjoshi780-svg/estore/issues"
+  },
+  "homepage": "https://github.com/hridyanshjoshi780-svg/estore#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "sqlite3": "^6.0.1"
+  }
+}

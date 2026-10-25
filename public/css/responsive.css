@@ -1,0 +1,13 @@
+@media (max-width: 900px) {
+  .topbar-inner { flex-wrap: wrap; }
+  .search-wrap { width: 100%; }
+  .nav-actions { margin-left: auto; }
+}
+
+@media (max-width: 560px) {
+  .brand { font-size: 1.35rem; }
+  .search-wrap { flex-wrap: wrap; }
+  .search-wrap select { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
+  .nav-actions { width: 100%; justify-content: space-between; }
+  .section-head { flex-direction: column; align-items: flex-start; }
+}

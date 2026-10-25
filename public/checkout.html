@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEasy | Checkout</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="/index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span>ShopEasy</a>
+        <div class="nav-actions">
+          <a href="/orders.html" class="nav-pill"><strong>Returns</strong><span>& Orders</span></a>
+          <a href="/cart.html" class="nav-pill cart-pill"><strong>Cart</strong><span class="cart-count" id="cart-count">0</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="container">
+        <div class="page-header">
+          <h1>Checkout</h1>
+          <p>Complete your order with cash on delivery.</p>
+        </div>
+        <div class="content-grid">
+          <div class="form-card">
+            <div id="form-alert" class="alert" role="alert"></div>
+            <form id="checkout-form">
+              <div class="form-grid">
+                <div class="field full">
+                  <label for="customerName">Full name</label>
+                  <input id="customerName" name="customerName" type="text" maxlength="100" required />
+                </div>
+                <div class="field full">
+                  <label for="phone">Phone number</label>
+                  <input id="phone" name="phone" type="tel" pattern="\+?[0-9][0-9\s-]{8,14}" required />
+                </div>
+                <div class="field full">
+                  <label for="address">Street address</label>
+                  <input id="address" name="address" type="text" minlength="5" maxlength="300" required />
+                </div>
+                <div class="field">
+                  <label for="city">City</label>
+                  <input id="city" name="city" type="text" maxlength="100" required />
+                </div>
+                <div class="field">
+                  <label for="pinCode">PIN code</label>
+                  <input id="pinCode" name="pinCode" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" required />
+                </div>
+                <div class="field full">
+                  <button class="primary-btn wide-button" type="submit">Place COD order</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div id="checkout-summary" class="summary-card"></div>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="/js/checkout.js"></script>
+  </body>
+</html>

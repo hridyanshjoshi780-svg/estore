@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEasy | Product</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="/index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span>ShopEasy</a>
+        <div class="search-wrap">
+          <input id="product-search" type="search" placeholder="Search products" />
+          <button id="search-submit" type="button">Search</button>
+        </div>
+        <div class="nav-actions">
+          <a href="/orders.html" class="nav-pill"><strong>Returns</strong><span>& Orders</span></a>
+          <a href="/cart.html" class="nav-pill cart-pill"><strong>Cart</strong><span class="cart-count" id="cart-count">0</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="container">
+        <div id="product-detail" class="product-detail-layout"></div>
+        <div id="form-alert" class="alert" role="alert"></div>
+      </div>
+    </main>
+
+    <script type="module" src="/js/products.js"></script>
+  </body>
+</html>

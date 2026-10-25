@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEasy | Home</title>
+    <meta name="description" content="ShopEasy storefront" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="/index.html" class="brand" aria-label="ShopEasy home">
+          <img class="brand-mark" src="/images/logo/shopeasy-mark.svg" alt="" width="32" height="32" />
+          ShopEasy
+        </a>
+
+        <div class="search-wrap">
+          <select id="category-filter" aria-label="Category filter">
+            <option value="">All</option>
+          </select>
+          <input id="product-search" type="search" placeholder="Search products" aria-label="Search products" />
+          <button id="search-submit" type="button">Search</button>
+        </div>
+
+        <div class="nav-actions">
+          <a href="/login.html" class="nav-pill" id="auth-button"><strong>Login</strong><span id="account-status">Account</span></a>
+          <button id="logout-button" class="ghost-btn hidden" type="button">Logout</button>
+          <a href="/orders.html" class="nav-pill" aria-label="Orders"><strong>Returns</strong><span>& Orders</span></a>
+          <a href="/cart.html" class="nav-pill cart-pill" aria-label="Shopping cart">
+            <strong>Cart</strong>
+            <span class="cart-count" id="cart-count">0</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="subnav">
+      <div class="container subnav-list">
+        <a class="subnav-link" href="/index.html">Home</a>
+        <a class="subnav-link" href="/index.html">Best Sellers</a>
+        <a class="subnav-link" href="/index.html">Daily Deals</a>
+        <a class="subnav-link" href="/index.html">Mobiles</a>
+        <a class="subnav-link" href="/index.html">Fashion</a>
+        <a class="subnav-link" href="/index.html">Home</a>
+        <a class="subnav-link" href="/admin/dashboard.html" data-admin-link>Admin</a>
+        <a class="subnav-link hidden" href="/seller/dashboard.html" data-seller-link>Seller dashboard</a>
+      </div>
+    </nav>
+
+    <main class="page">
+      <div class="container">
+        <section class="banner">
+          <div class="banner-copy">
+            <p class="eyebrow">Smart essentials, delivered fast</p>
+            <h1>Everyday tech and home picks for modern life.</h1>
+            <p>ShopEasy brings together useful essentials, easy checkout, and trusted daily value in one streamlined shopping experience.</p>
+            <div class="banner-actions">
+              <a class="primary-btn" href="#catalogue">Shop now</a>
+              <a class="secondary-btn" href="/orders.html">My orders</a>
+            </div>
+          </div>
+          <div class="banner-visual">
+            <img src="/images/banners/essentials.svg" alt="" width="720" height="480" fetchpriority="high" />
+          </div>
+        </section>
+
+        <div class="section-head">
+          <h2>Shop by category</h2>
+        </div>
+        <div id="category-chips" class="category-grid"></div>
+
+        <div class="section-head" id="catalogue">
+          <h2>Top picks</h2>
+        </div>
+        <div id="home-grid" class="product-grid"></div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <h4>ShopEasy</h4>
+          <a href="/index.html">Home</a>
+          <a href="/orders.html">Orders</a>
+          <a href="/cart.html">Cart</a>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <a href="/login.html">Login</a>
+          <a href="/register.html">Register</a>
+          <a href="/checkout.html">Checkout</a>
+        </div>
+        <div>
+          <h4>Browse</h4>
+          <a href="/index.html">Featured</a>
+          <a href="/index.html">Categories</a>
+          <a href="/admin/dashboard.html">Admin</a>
+        </div>
+      </div>
+    </footer>
+
+    <div id="form-alert" class="alert" role="alert"></div>
+    <script type="module" src="/js/products.js"></script>
+  </body>
+</html>

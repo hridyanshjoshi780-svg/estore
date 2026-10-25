@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEasy | Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="/index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span>ShopEasy</a>
+        <div class="nav-actions">
+          <a href="/orders.html" class="nav-pill"><strong>Returns</strong><span>& Orders</span></a>
+          <a href="/cart.html" class="nav-pill cart-pill"><strong>Cart</strong><span class="cart-count" id="cart-count">0</span></a>
+          <button id="logout-button" class="ghost-btn" type="button">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="container">
+        <div class="page-header">
+          <h1>Admin dashboard</h1>
+          <p>Manage catalog, categories, and order delivery.</p>
+        </div>
+
+        <div class="admin-layout">
+          <aside class="sidebar">
+            <a class="active" href="/admin/dashboard.html">Overview</a>
+            <a href="/admin/products.html">Products</a>
+            <a href="/admin/categories.html">Categories</a>
+            <a href="/admin/orders.html">Orders</a>
+          </aside>
+
+          <div>
+            <div id="dashboard-stats" class="dash-grid"></div>
+            <div id="form-alert" class="alert" role="alert"></div>
+            <div class="panel">
+              <h2 id="product-form-title">Quick add product</h2>
+              <form id="product-form" class="form-grid">
+                <input id="product-id" type="hidden" />
+                <div class="field">
+                  <label for="product-category">Category</label>
+                  <select id="product-category"></select>
+                </div>
+                <div class="field">
+                  <label for="product-name">Product name</label>
+                  <input id="product-name" type="text" maxlength="120" required />
+                </div>
+                <div class="field full">
+                  <label for="product-description">Description</label>
+                  <textarea id="product-description" maxlength="2000"></textarea>
+                </div>
+                <div class="field">
+                  <label for="product-price">Price</label>
+                  <input id="product-price" type="number" min="0" step="1" required />
+                </div>
+                <div class="field">
+                  <label for="product-stock">Stock</label>
+                  <input id="product-stock" type="number" min="0" step="1" required />
+                </div>
+                <div class="field full">
+                  <label for="product-image-url">Image URL (optional)</label>
+                  <input id="product-image-url" type="url" maxlength="500" />
+                </div>
+                <div class="field full">
+                  <label><input id="product-active" type="checkbox" checked /> Active in catalogue</label>
+                </div>
+                <div class="field full">
+                  <div class="inline-actions">
+                    <button id="product-submit" class="primary-btn" type="submit">Create product</button>
+                    <button id="product-cancel" class="secondary-btn hidden" type="button">Cancel edit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="/js/admin.js"></script>
+  </body>
+</html>
